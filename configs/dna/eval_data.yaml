@@ -1,0 +1,11 @@
+_target_: giga.data.datasets.dna.DNADataset
+data_dir: /path/to/your/DNA-Rendering/part-1
+texture_dir: /path/to/textures
+main_dir: main
+annots_dir: annotations
+num_input_cameras: ["25", "01", "37", "13"]
+num_target_cameras: ["16", "28", "40", "04", "10"]
+image_size: [2048, 2048]
+rig_size: 48
+character_selection: [ 39 ]  # part-1 has only 39 characters
+timesteps: [ -1 ]

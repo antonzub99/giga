@@ -1,0 +1,26 @@
+_target_: giga.data.datasets.dna.DNADataset
+data_dir: /path/to/DNA-Rendering/part-2
+texture_dir: /path/to/textures
+main_dir: main
+annots_dir: annotations
+num_input_cameras: [3, 4]
+num_target_cameras: [4]
+image_size: [1024, 1024]
+rig_size: 16
+character_selection: [ 400 ] # part-2 has 400 characters
+timesteps: [ 
+  0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95,
+  100, 110, 120, 130, 140, 150, 160, 170, 175,
+  180, 190, 200, 210, 220
+ ]
+patch_config:
+  num_patches: 8
+  patch_size: 256
+  patch_scale: [0.5, 0.75, 1.0, 1.5, 2.0]
+split_config:
+  seed: 1337
+  method: index
+  character_indices:
+    train: [0, 375]    
+    val: [375, 400] 
+    test: [375, 400]

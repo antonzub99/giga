@@ -1,0 +1,17 @@
+_target_: giga.data.datasets.mvh.MVHAposeDataset
+data_dir: /path/to/your/MVHumanNet
+exclusions_file: ./configs/mvh/incomplete_smplx_chars.txt
+num_input_cameras: [
+  'CC32871A059', 'CC32871A004', 'CC32871A029', 'CC32871A052', 'CC32871A029', 'CC32871A055', # middle row
+  'CC32871A018', 'CC32871A036', 'CC32871A006', 'CC32871A056', 'CC32871A049', 'CC32871A019', # top row
+  'CC32871A010', 'CC32871A027', 'CC32871A016', 'CC32871A057', 'CC32871A023', 'CC32871A030', # bottom row
+]
+num_target_cameras: [1]
+image_size: [1500, 1500]
+rig_size: 48
+character_selection: [ 2000 ]
+timesteps: [ 0 ]
+patch_config:
+  num_patches: 1
+  patch_size: 256
+  patch_scale: [1.0]

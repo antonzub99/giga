@@ -1,0 +1,13 @@
+_target_: giga.data.datasets.mvhpp.MVHPPDataset
+data_dir: /your/path/to/MVHPP
+texture_dir: /your/path/to/textures
+num_input_cameras: [
+  'cam_00', 'cam_08', 'cam_04', 'cam_12'
+]
+num_target_cameras: [
+  'cam_02', 'cam_06', 'cam_10', 'cam_14'
+]
+image_size: [1024, 1024]
+rig_size: 16
+character_selection: 100
+timesteps: [ -1 ]

@@ -1,0 +1,12 @@
+_target_: giga.data.datasets.mvhpp.MVHPPAposeDataset
+data_dir: /your/path/to/MVHPP
+num_input_cameras: [16]
+num_target_cameras: [4]
+image_size: [1024, 1024]
+rig_size: 16
+character_selection: [ 2000 ]
+timesteps: [ 0 ]
+patch_config:
+  num_patches: 1
+  patch_size: 256
+  patch_scale: [1.0]

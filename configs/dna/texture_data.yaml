@@ -1,0 +1,14 @@
+_target_: giga.data.datasets.dna.DNADataset
+data_dir: /path/to/your/DNA-Rendering/part-2 # change for part-1 if necessary
+main_dir: main
+annots_dir: annotations
+num_input_cameras: [16]
+num_target_cameras: [1]
+image_size: [1024, 1024]
+rig_size: 16
+character_selection: [ 400 ]
+timesteps: [ 100 ]
+patch_config:
+  num_patches: 1
+  patch_size: 256
+  patch_scale: [1.0]

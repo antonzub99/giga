@@ -1,0 +1,20 @@
+_target_: giga.data.datasets.mvhpp.MVHPPDataset
+data_dir: /your/path/to/MVHPP
+texture_dir: /your/path/to/textures
+num_input_cameras: [3, 4]
+num_target_cameras: [4]
+image_size: [1024, 1024]
+rig_size: 16
+character_selection: [ 2000 ]
+timesteps: [ 0, 5, 10, 12, 15, 20, 22, 25, 30, 35, 40 ]
+patch_config:
+  num_patches: 8
+  patch_size: 256
+  patch_scale: [0.5, 0.75, 1.0, 1.5, 2.0]
+split_config:
+  seed: 1337
+  method: index
+  character_indices:
+    train: [0, 1800]
+    val: [1800, 2000]
+    test: [1900, 2000]

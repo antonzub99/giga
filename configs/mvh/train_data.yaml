@@ -1,0 +1,26 @@
+_target_: giga.data.datasets.mvh.MVHDataset
+data_dir: /path/to/MVHumanNet
+texture_dir: /path/to/textures
+exclusions_file: ./configs/mvh/incomplete_smplx_chars.txt # complete till absolute path on your system
+num_input_cameras: [3, 4]
+num_target_cameras: [4]
+image_size: [1024, 1024]
+rig_size: 16
+character_selection: [ 1600 ]
+timesteps: [ 
+  20, 40, 50, 60, 90,  
+  110, 140, 150, 170, 180, 
+  190, 210, 240, 250, 260,
+  281, 290, 300, 310, 330,
+  ]
+patch_config:
+  num_patches: 8
+  patch_size: 256
+  patch_scale: [0.5, 0.75, 1.0, 1.5, 2.0]
+split_config:
+  seed: 1337
+  method: index
+  character_indices:
+    train: [0, 1500]
+    val: [1500, 1600]
+    test: [1500, 1600]

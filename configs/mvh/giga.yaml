@@ -1,0 +1,81 @@
+experiment_name: giga_mvh
+
+pl_model: giga.engine.models.GIGAv2
+
+model:
+    _target_: giga.nn.models.MultiHeadUnet
+    kwargs: 
+        in_channels: [6, 3]
+        out_channels: [3, 3, 8]
+        model_channels: 64
+        channel_multipliers: [1, 2, 4, 8]
+        resblocks_per_layer: 3
+        num_heads: 8
+        context_dim: 1024
+
+conditioner:
+    _target_: giga.nn.models.FFMLP
+    kwargs: 
+        in_channels: 162
+        out_channels: 1024
+        num_blocks: 4
+        
+optimizer:
+    _target_: torch.optim.AdamW
+    _partial_: True
+    lr: 0.0001
+    betas: [0.9, 0.999]
+    eps: 1e-08
+    weight_decay: 0.0001
+
+loss:
+    _target_: giga.engine.loss.LossComputer
+    kwargs: 
+        compile: False
+        loss_weights: 
+            ssim: 0.5
+            rgb_l1: 0.5
+            alpha_l2: 0.2
+            perceptual: 0.5
+        regularizer_weights: 
+            offsets_mean: 0.1
+            uv_opacity: 1.0
+            opacities_beta: 0.1
+            transparent_offsets: 0.1
+            transparent_scales: 0.1
+
+trainer:
+    max_epochs: -1
+    max_steps: 250000
+    device: cuda
+    num_devices: 1
+    ddp: False
+    mixed_precision: True
+    precision: bf16
+    compile: False
+    gradient_accumulation_steps: 1
+    scale_multiplier: 0.005
+    bg_color: black
+    texture_resolution: [512, 512]
+    texture_dropout: 0.5
+    projection_settings: 
+        strategy: softmax
+        top_k: 4
+    num_warmup_steps: 20000
+
+data:
+  batch_size: 4
+  num_workers: 5
+  pin_memory: True
+  shuffle: True
+  persistent_workers: True
+  drop_last: True
+
+logging:
+    output_dir: /path/where/to/store/checkpoints
+    log_freq: 200
+    log_stats_freq: 1000
+    log_media_freq: 2500
+    save_freq: 10000
+    eval_freq: 25000
+    log_level: INFO

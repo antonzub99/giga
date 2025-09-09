@@ -1,0 +1,14 @@
+_target_: giga.data.datasets.mvh.MVHDataset
+data_dir: /your/path/to/MVHumanNet
+texture_dir: /path/to/textures
+exclusions_file: ./configs/mvh/incomplete_smplx_chars.txt
+num_input_cameras: [
+  'CC32871A059', 'CC32871A004', 'CC32871A052', 'CC32871A029'
+]
+num_target_cameras: [
+  'CC32871A018', 'CC32871A034', 'CC32871A058', 'CC32871A031'
+]
+image_size: [1500, 1500] # will do a center crop and resize to this resolution
+rig_size: 48
+character_selection: 100
+timesteps: [ -1 ]

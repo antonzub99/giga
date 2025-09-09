@@ -1,0 +1,72 @@
+# -----------------------------
+# Core Python artifacts
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions / compiled objects
+*.so
+*.dylib
+*.dll
+*.pyd
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments / environment managers
+.venv/
+venv/
+env/
+.env/
+.env.*
+.python-version
+.uv/
+
+# Package / tooling caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.cache/
+
+# IDE / Editor
+.vscode/
+.idea/
+.spyproject/
+.ropeproject/
+*.code-workspace
+
+# OS noise
+.DS_Store
+Thumbs.db
+.directory
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+slurm-*.out
+slurm-*.err
+
+# Machine learning experiment outputs
+lightning_logs/
+wandb/
+runs/
+output/
+outputs/
+results/
+
+# Model checkpoints (keep the ones under config/ that are versioned)
+*.ckpt
+!config/**/*.ckpt
+*.pth
+*.pt
+*.onnx
+
+# VSCode Local history
+.history/

@@ -1,0 +1,11 @@
+name: giga
+channels:
+  - nvidia/label/cuda-12.8.1
+  - conda-forge
+dependencies:
+  - cuda
+  - cuda-nvcc
+  - cuda-nvtx
+  - cuda-cupti
+  - cuda-runtime
+  - cuda-libraries-dev
