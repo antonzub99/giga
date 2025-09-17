@@ -1,4 +1,6 @@
-# <center>GIGA: Generalizable Sparse Image-driven Gaussian Humans</center>
+# GIGA: Generalizable Sparse Image-driven Gaussian Humans
+
+[Project page](https://vcai.mpi-inf.mpg.de/projects/GIGA/) · [Arxiv](https://arxiv.org/abs/2504.07144)
 
 This is an official repository for the GIGA project.
 
