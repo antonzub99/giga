@@ -1,8 +1,10 @@
-# GIGA: Generalizable Sparse Image-driven Gaussian Humans
+<h1 align="center">GIGA: Generalizable Sparse Image-driven Gaussian Humans</h1>
 
-[Project page](https://vcai.mpi-inf.mpg.de/projects/GIGA/) · [Arxiv](https://arxiv.org/abs/2504.07144)
+<h3 align="center">3DV 2026</h3>
 
-This is an official repository for the GIGA project.
+<p align="center">
+  <a href="https://vcai.mpi-inf.mpg.de/projects/GIGA/">Project page</a> · <a href="https://arxiv.org/abs/2504.07144">Arxiv</a>
+</p>
 
 ## Table of Contents
 
@@ -212,8 +214,8 @@ This repo has been also tested with `torch==2.6.0+cu124`, `torch==2.7.0`, `torch
 @article{zubekhin2025giga,
 title={GIGA: Generalizable Sparse Image-driven Gaussian Humans},
 author={Zubekhin, Anton and Zhu, Heming and Gotardo, Paulo and Beeler, Thabo  and Habermann, Marc and Theobalt, Christian},
-year={2025},
-journal={arXiv},
+year={2026},
+journal={International Conference on 3D Vision (3DV)},
 eprint={2504.07144},
 }
 ```
