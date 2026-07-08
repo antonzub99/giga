@@ -211,12 +211,11 @@ This repo has been also tested with `torch==2.6.0+cu124`, `torch==2.7.0`, `torch
 ## Citation
 
 ```bibtex
-@article{zubekhin2025giga,
-title={GIGA: Generalizable Sparse Image-driven Gaussian Humans},
-author={Zubekhin, Anton and Zhu, Heming and Gotardo, Paulo and Beeler, Thabo  and Habermann, Marc and Theobalt, Christian},
+@inproceedings{zubekhin2026giga,
+author={Zubekhin, Anton and Zhu, Heming and Gotardo, Paulo and Beeler, Thabo and Habermann, Marc and Theobalt, Christian},
+booktitle={2026 International Conference on 3D Vision (3DV)}, 
+title={{GIGA}: Generalizable Sparse Image-Driven Gaussian Humans}, 
 year={2026},
-journal={International Conference on 3D Vision (3DV)},
-eprint={2504.07144},
 }
 ```
 
